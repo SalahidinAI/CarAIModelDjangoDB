@@ -3,7 +3,7 @@ from django.db import models
 
 class Car(models.Model):
     region = models.CharField(max_length=64)
-    price = models.PositiveSmallIntegerField()
+    price = models.FloatField(null=True, blank=True)
     year = models.PositiveSmallIntegerField()
     manufacturer = models.CharField(max_length=64)
     model = models.CharField(max_length=64)
